@@ -1,0 +1,600 @@
+//paleta de colores
+$ice-blue:  rgb(223, 235, 238);
+$light-blue:lightblue;
+$royal-blue:royalblue;
+$solid-blue:blue;
+$dark-blue: darkblue;
+$dark-blue-t: rgba(1, 1, 73, 0.829);
+$solid-black: black;
+
+//fuentes
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Source+Sans+Pro&display=swap');
+//fuentes
+$font-hl: 'Permanent Marker', cursive;
+$font-body: 'Source Sans Pro', sans-serif;
+
+// breakpoints
+
+$breakpoint-xs: 360px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 991px;
+$breakpoint-lg: 1200px;
+
+//mixins
+//Formato Header.
+
+@mixin header-format ($width, $height){
+    width: $width;
+    height: $height;
+    background-color: $light-blue;
+    background-image: url(../img/kana.jpg);
+    background-size: cover;
+    padding:3px;
+    margin-top:5px;
+    margin-bottom:5px;
+       
+}
+
+@mixin position ($position, $top, $left){
+    position:$position;
+    top:$top;
+    left:$left;
+}
+@mixin pos-var ($top,$left){
+    top:$top;
+    left: $left;
+}
+
+@mixin bannertxt-format ($width,$pad,$fs,$ta){
+    background-color: rgba(255, 0, 0, 0.705);
+    width: $width;
+    padding:$pad;
+    font-size:$fs;
+    text-align: $ta;
+    
+}
+    
+@mixin box($color,$width,$height) {
+    background-color: $color;
+    width: $width;
+    height:$height;
+    border: solid 5px sandybrown;
+    padding: 10px;
+    margin: 100px;
+}
+
+
+//General
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+//cuerpo
+
+body{
+    font-family:$font-body;
+    color:$light-blue;
+    background-image: url(../img/umi.gif);
+    
+}
+
+//navbar
+nav {
+    height:50px;
+    font-family:$font-hl;
+    background-color: $dark-blue-t;
+    
+    h1{
+    position:absolute;
+    width: 200px;
+    top: 7px;
+    left: 5%;
+    color: white;
+    text-transform: uppercase;
+    }
+
+    ul {
+        float:right;
+        margin-right: 25px;
+        list-style: none;
+
+        li{
+            display: inline-block;
+            line-height: 40px;
+            margin: 0px 15px;
+
+            a{
+                position: relative;
+                padding: 6px ;
+                color: white;
+                font-size: 18px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    label #sign--one,
+    label #sign--two {
+        font-size: 30px;
+        color: white;
+        float: right;
+        line-height: 50px;
+        margin-right: 30px;
+        cursor: pointer;
+        display: none;
+    }
+
+    #res-menu{
+        display: none;
+    }
+}
+
+//header
+header {
+    @include header-format(99.58%, 300px);
+    position: static;
+    display:block;
+    
+        img {
+            @include position (relative, 20%,60%);
+            width: 450px;
+        }
+       }
+
+//banner
+.banner {
+   border: solid 10px $royal-blue;
+   width:98.5%;
+   height: 100px;
+   background-color: rgba(75, 6, 6, 0.589);
+   background-image: url(../img/thumb-1920-46709.jpg);
+   background-size: contain;
+   color: white;
+   position: static;
+    
+   img{
+       @include position(relative,5px ,20px);
+       width: 100px;
+       z-index:5;
+       animation: gatito 8s infinite;
+
+       @keyframes gatito {
+        from {left: 1200px;}
+        to {left: 20px;}
+       }   
+   }
+    
+   .warning {
+       @include position(relative,-60% ,50%);
+       font-family:$font-hl;
+       color: red;
+       font-size: 50px;
+       z-index:8;
+    }
+
+    .bannertxt {
+        @include bannertxt-format(60vw,5px,25px,right);
+        @include position (relative, -70%, 30%);
+        background-color: rgba(255, 0, 0, 0.705);
+        width: 60vw;
+        padding:5px;
+        text-align: right;
+        font-size:25px;
+    }
+
+}
+
+//contenido
+    section{
+
+        display:flex;
+        justify-content: space-around;
+
+        article{
+            width: 600px;
+            background-image: url(../img/fondogatitos_section.jpg);
+            background-size: cover;
+            border: solid 5px red;
+            border-radius: 10px;
+            margin-top:10px;
+            margin-bottom:10px;
+
+            img{
+                @include position(relative,13%,13%);
+                border:solid 20px $solid-black;
+            }
+
+            .txt {
+                @include position(relative,-90px ,110px);
+                background-color:$dark-blue-t;
+                padding: 5px;
+                width: 400px;
+                text-align: right;
+                z-index: 5;
+            }
+
+        }
+
+        .sticker {
+            border: dashed 8px red;
+            width: 150px;
+            z-index:8;
+        }
+ 
+        .keepcalm {
+            @include position (relative, -530px, 0px);
+            transform: rotate(-35deg);
+        }
+
+        .fishcat {
+            @include position (relative, 40px, 420px);
+            transform: rotate(35deg);
+        }
+
+        .omg {
+            @include position (relative, -600px, 0px);
+            transform: rotate(-25deg);
+        }
+
+        .sushi {
+            @include position(relative,-25px, 420px);
+            transform: rotate(25deg);
+        }
+    }
+
+
+
+//aside
+    
+   aside {
+       @include position(absolute, 175%, 36%);
+       background-image: url(../img/kittensushibar2.jpg);
+       background-size: cover;
+       border:solid 5px $solid-black;
+       width: 350px;
+       height:200px;
+       z-index:8;
+       
+
+       button{
+           @include position(relative,90px,240px);
+           width:100px;
+
+           img{
+               width:90px;
+           }
+       }      
+   }
+
+//footer
+
+footer {
+    position: static;
+    background-color: $light-blue;
+    color: $dark-blue;
+    padding: 5px;
+
+    .komrad {
+        @include position(relative,0px,10px);
+        width: 200px;
+        z-index: 10;
+    }
+    .footerimg {
+        @include position(relative,5px,600px);
+        width:500px;
+    }
+
+    .atw {
+        @include position(relative,0px, 0px);
+    }
+}
+
+
+//media queries
+
+    @media (max-width:860px){
+        nav{
+            label #sign--one{
+                display: block;
+            }
+    
+            ul {
+                position:fixed;
+                width:40%;
+                height: 50vh;
+                background-color: darkblue;
+                top: 50px;
+                left: -600px;
+                text-align: center;
+                transition:.9s;
+                z-index: 10;
+    
+                li{
+                    display: block;
+                    margin: 40px 0px;
+                    line-height: 30px;
+    
+                    a{
+                        font-size: 20px;
+                    }
+                }
+           }
+    
+           #res-menu:checked ~ ul{
+               left: 0;
+           }
+    
+           #res-menu:checked ~ label #sign--one{
+               display: none;
+           }
+           
+           #res-menu:checked ~ label #sign--two{
+               display:block;
+           }
+        }
+    }
+//mobile first.
+
+@media (max-width:$breakpoint-xs){
+
+    header {
+     @include header-format(100%, 100px);
+     
+     img {
+         @include pos-var(5%,5%);
+         width: 200px;
+         
+    }
+    }//fin header
+    .banner {
+        width: 340px;
+
+        img{
+        animation: none;}
+
+        .warning{
+            display:none;
+        }
+        .bannertxt{
+            @include position(relative,-100px, 120px);
+            width:200px;
+            padding:3px;
+            text-align:center;
+            font-size: 20px;
+        }
+    }//fin banner
+
+    section {
+        display: block;
+
+        article{
+            width:340px;
+            margin: 5px;
+
+            img {
+                @include position(relative,20px ,25px);
+                width:250px;
+            }
+            .txt {
+                 @include position(relative,30px,25px);
+                 width:280px;
+
+            } 
+            .sticker{
+                width: 100px;    
+            }   
+
+            .keepcalm {
+                @include position(relative,-420px,-5px);
+                transform: rotate(-20deg);
+             }
+
+             .fishcat {
+                 @include position(relative,-530px,210px);
+                 transform: rotate(20deg);
+             }
+
+             .omg {
+                @include position(relative,-530px,-10px);
+                transform: rotate(-20deg);
+            }
+            .sushi{
+                @include position(relative,-530px,210px);
+                transform: rotate(20deg);
+            }
+
+        }   
+    } //fin contenido.
+
+    aside {
+        @include position (relative, 0px, 0px);
+    }//fin de aside.
+
+    footer{
+        width:100%;
+        padding-top: 10px;
+        margin-top: 10px;
+
+        .komrad{
+            width: 100px;
+        }
+
+        .footerimg{
+            @include position(relative, 0px , 30px );
+            width:200px;
+        }
+
+        .atw {
+            @include position(relative, 0px, 0px);
+            text-align: center;
+        }
+        
+    }
+}
+
+//display mobile xl tablet
+@media (min-width:$breakpoint-xs)and (max-width:$breakpoint-sm){
+    header {
+        @include header-format(100%, 200px);
+        
+        img{
+            @include position (relative, 15%,30%);
+            width: 300px; 
+        }
+    } //fin de header.
+
+    .banner{
+        width: 97.5%;
+
+        .warning {
+            @include position(relative,-70% ,20%);
+            font-size:30px;
+        }
+        .bannertxt{
+            @include position(relative, -70%, 30%);
+            width:300px;
+            padding:3px;
+            text-align:center;
+            font-size: 20px;
+        }
+    }//fin de banner.
+    section {
+        display: block;
+
+        article{
+            width:94vw;
+            height: 50vh;
+            margin: 5px;
+
+            img {
+                @include position(relative,25px ,9.5px);
+                width:35%;
+            }
+            .txt {
+                 @include position(relative,-50%,50%);
+                 width:40%;
+            }
+        }
+
+        .sticker{
+            width: 100px;    
+        }   
+
+        .keepcalm {
+            @include position(relative,-420px,-5px);
+            transform: rotate(-20deg);
+         }
+
+         .fishcat {
+             @include position(relative,-513px,75%);
+             border-radius: 60px;
+             transform: rotate(20deg);
+         }
+
+         .omg {
+            @include position(relative,-530px,-10px);
+            transform: rotate(-20deg);
+        }
+        .sushi{
+            @include position(relative,-500px,50%);
+            border-radius: 60px;
+            transform: rotate(10deg);
+        }
+    }//fin contenido.
+
+    aside {
+        @include position (relative, 0px, 0px);
+        width: 93.7%;
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+
+        button{
+         @include position(relative,45%,70%);
+        }
+        
+    }//fin aside
+    
+    footer{
+        width:100%;
+        padding-top: 10px;
+        margin-top: 10px;
+
+        .komrad{
+            width: 150px;
+        }
+
+        .footerimg{
+            @include position(relative, 0px , 15%);
+            width:200px;
+        }
+
+        .atw {
+            @include position(relative, 0px, 0px);
+            text-align: center;
+        }
+        
+    }//fin footer.
+
+}
+
+//display medium size
+
+@media (min-width:$breakpoint-sm) and (max-width:$breakpoint-lg){
+    header{
+
+        img{
+            @include position (relative, 20%,30%);
+            width: 450px; 
+        }
+    } //fin de header
+   .banner {
+       .warning {
+           left: 20%;
+       }
+       .bannertxt {
+           top: -75%;
+           font-size: 18px;
+           text-align: center;
+           width:60vw;
+       }
+   }//fin banner
+
+section{
+    article{
+        width: 45vw;
+        height: 700px;
+    
+
+    img{
+        width: 65%;
+    }
+
+    .txt {
+        top: 20%;
+        left: 15%;
+        width:70%;
+    }
+}
+ .sticker{
+     display: none;
+ }
+ 
+}
+
+aside{
+    @include pos-var(190%,35%);
+    width: 350px;
+}//fin aside.
+
+footer {
+    .footerimg{
+        left:10%;
+    }
+}
+
+}
+
+
+

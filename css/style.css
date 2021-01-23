@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Source+Sans+Pro&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: lightblue;
+  background-image: url(../img/umi.gif);
+}
+
+nav {
+  height: 50px;
+  font-family: "Permanent Marker", cursive;
+  background-color: rgba(1, 1, 73, 0.829);
+}
+nav h1 {
+  position: absolute;
+  width: 200px;
+  top: 7px;
+  left: 5%;
+  color: white;
+  text-transform: uppercase;
+}
+nav ul {
+  float: right;
+  margin-right: 25px;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 40px;
+  margin: 0px 15px;
+}
+nav ul li a {
+  position: relative;
+  padding: 6px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+nav label #sign--one,
+nav label #sign--two {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 50px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+nav #res-menu {
+  display: none;
+}
+
+header {
+  width: 99.58%;
+  height: 300px;
+  background-color: lightblue;
+  background-image: url(../img/kana.jpg);
+  background-size: cover;
+  padding: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: static;
+  display: block;
+}
+header img {
+  position: relative;
+  top: 20%;
+  left: 60%;
+  width: 450px;
+}
+
+.banner {
+  border: solid 10px royalblue;
+  width: 98.5%;
+  height: 100px;
+  background-color: rgba(75, 6, 6, 0.589);
+  background-image: url(../img/thumb-1920-46709.jpg);
+  background-size: contain;
+  color: white;
+  position: static;
+}
+.banner img {
+  position: relative;
+  top: 5px;
+  left: 20px;
+  width: 100px;
+  z-index: 5;
+  animation: gatito 8s infinite;
+}
+@keyframes gatito {
+  from {
+    left: 1200px;
+  }
+  to {
+    left: 20px;
+  }
+}
+.banner .warning {
+  position: relative;
+  top: -60%;
+  left: 50%;
+  font-family: "Permanent Marker", cursive;
+  color: red;
+  font-size: 50px;
+  z-index: 8;
+}
+.banner .bannertxt {
+  background-color: rgba(255, 0, 0, 0.705);
+  width: 60vw;
+  padding: 5px;
+  font-size: 25px;
+  text-align: right;
+  position: relative;
+  top: -70%;
+  left: 30%;
+  background-color: rgba(255, 0, 0, 0.705);
+  width: 60vw;
+  padding: 5px;
+  text-align: right;
+  font-size: 25px;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+}
+section article {
+  width: 600px;
+  background-image: url(../img/fondogatitos_section.jpg);
+  background-size: cover;
+  border: solid 5px red;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+section article img {
+  position: relative;
+  top: 13%;
+  left: 13%;
+  border: solid 20px black;
+}
+section article .txt {
+  position: relative;
+  top: -90px;
+  left: 110px;
+  background-color: rgba(1, 1, 73, 0.829);
+  padding: 5px;
+  width: 400px;
+  text-align: right;
+  z-index: 5;
+}
+section .sticker {
+  border: dashed 8px red;
+  width: 150px;
+  z-index: 8;
+}
+section .keepcalm {
+  position: relative;
+  top: -530px;
+  left: 0px;
+  transform: rotate(-35deg);
+}
+section .fishcat {
+  position: relative;
+  top: 40px;
+  left: 420px;
+  transform: rotate(35deg);
+}
+section .omg {
+  position: relative;
+  top: -600px;
+  left: 0px;
+  transform: rotate(-25deg);
+}
+section .sushi {
+  position: relative;
+  top: -25px;
+  left: 420px;
+  transform: rotate(25deg);
+}
+
+aside {
+  position: absolute;
+  top: 175%;
+  left: 36%;
+  background-image: url(../img/kittensushibar2.jpg);
+  background-size: cover;
+  border: solid 5px black;
+  width: 350px;
+  height: 200px;
+  z-index: 8;
+}
+aside button {
+  position: relative;
+  top: 90px;
+  left: 240px;
+  width: 100px;
+}
+aside button img {
+  width: 90px;
+}
+
+footer {
+  position: static;
+  background-color: lightblue;
+  color: darkblue;
+  padding: 5px;
+}
+footer .komrad {
+  position: relative;
+  top: 0px;
+  left: 10px;
+  width: 200px;
+  z-index: 10;
+}
+footer .footerimg {
+  position: relative;
+  top: 5px;
+  left: 600px;
+  width: 500px;
+}
+footer .atw {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+@media (max-width: 860px) {
+  nav label #sign--one {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    width: 40%;
+    height: 50vh;
+    background-color: darkblue;
+    top: 50px;
+    left: -600px;
+    text-align: center;
+    transition: 0.9s;
+    z-index: 10;
+  }
+  nav ul li {
+    display: block;
+    margin: 40px 0px;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  nav #res-menu:checked ~ ul {
+    left: 0;
+  }
+  nav #res-menu:checked ~ label #sign--one {
+    display: none;
+  }
+  nav #res-menu:checked ~ label #sign--two {
+    display: block;
+  }
+}
+@media (max-width: 360px) {
+  header {
+    width: 100%;
+    height: 100px;
+    background-color: lightblue;
+    background-image: url(../img/kana.jpg);
+    background-size: cover;
+    padding: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  header img {
+    top: 5%;
+    left: 5%;
+    width: 200px;
+  }
+
+  .banner {
+    width: 340px;
+  }
+  .banner img {
+    animation: none;
+  }
+  .banner .warning {
+    display: none;
+  }
+  .banner .bannertxt {
+    position: relative;
+    top: -100px;
+    left: 120px;
+    width: 200px;
+    padding: 3px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  section {
+    display: block;
+  }
+  section article {
+    width: 340px;
+    margin: 5px;
+  }
+  section article img {
+    position: relative;
+    top: 20px;
+    left: 25px;
+    width: 250px;
+  }
+  section article .txt {
+    position: relative;
+    top: 30px;
+    left: 25px;
+    width: 280px;
+  }
+  section article .sticker {
+    width: 100px;
+  }
+  section article .keepcalm {
+    position: relative;
+    top: -420px;
+    left: -5px;
+    transform: rotate(-20deg);
+  }
+  section article .fishcat {
+    position: relative;
+    top: -530px;
+    left: 210px;
+    transform: rotate(20deg);
+  }
+  section article .omg {
+    position: relative;
+    top: -530px;
+    left: -10px;
+    transform: rotate(-20deg);
+  }
+  section article .sushi {
+    position: relative;
+    top: -530px;
+    left: 210px;
+    transform: rotate(20deg);
+  }
+
+  aside {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+
+  footer {
+    width: 100%;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  footer .komrad {
+    width: 100px;
+  }
+  footer .footerimg {
+    position: relative;
+    top: 0px;
+    left: 30px;
+    width: 200px;
+  }
+  footer .atw {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+  }
+}
+@media (min-width: 360px) and (max-width: 767px) {
+  header {
+    width: 100%;
+    height: 200px;
+    background-color: lightblue;
+    background-image: url(../img/kana.jpg);
+    background-size: cover;
+    padding: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  header img {
+    position: relative;
+    top: 15%;
+    left: 30%;
+    width: 300px;
+  }
+
+  .banner {
+    width: 97.5%;
+  }
+  .banner .warning {
+    position: relative;
+    top: -70%;
+    left: 20%;
+    font-size: 30px;
+  }
+  .banner .bannertxt {
+    position: relative;
+    top: -70%;
+    left: 30%;
+    width: 300px;
+    padding: 3px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  section {
+    display: block;
+  }
+  section article {
+    width: 94vw;
+    height: 50vh;
+    margin: 5px;
+  }
+  section article img {
+    position: relative;
+    top: 25px;
+    left: 9.5px;
+    width: 35%;
+  }
+  section article .txt {
+    position: relative;
+    top: -50%;
+    left: 50%;
+    width: 40%;
+  }
+  section .sticker {
+    width: 100px;
+  }
+  section .keepcalm {
+    position: relative;
+    top: -420px;
+    left: -5px;
+    transform: rotate(-20deg);
+  }
+  section .fishcat {
+    position: relative;
+    top: -513px;
+    left: 75%;
+    border-radius: 60px;
+    transform: rotate(20deg);
+  }
+  section .omg {
+    position: relative;
+    top: -530px;
+    left: -10px;
+    transform: rotate(-20deg);
+  }
+  section .sushi {
+    position: relative;
+    top: -500px;
+    left: 50%;
+    border-radius: 60px;
+    transform: rotate(10deg);
+  }
+
+  aside {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 93.7%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  aside button {
+    position: relative;
+    top: 45%;
+    left: 70%;
+  }
+
+  footer {
+    width: 100%;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  footer .komrad {
+    width: 150px;
+  }
+  footer .footerimg {
+    position: relative;
+    top: 0px;
+    left: 15%;
+    width: 200px;
+  }
+  footer .atw {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+  }
+}
+@media (min-width: 767px) and (max-width: 1200px) {
+  header img {
+    position: relative;
+    top: 20%;
+    left: 30%;
+    width: 450px;
+  }
+
+  .banner .warning {
+    left: 20%;
+  }
+  .banner .bannertxt {
+    top: -75%;
+    font-size: 18px;
+    text-align: center;
+    width: 60vw;
+  }
+
+  section article {
+    width: 45vw;
+    height: 700px;
+  }
+  section article img {
+    width: 65%;
+  }
+  section article .txt {
+    top: 20%;
+    left: 15%;
+    width: 70%;
+  }
+  section .sticker {
+    display: none;
+  }
+
+  aside {
+    top: 190%;
+    left: 35%;
+    width: 350px;
+  }
+
+  footer .footerimg {
+    left: 10%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
